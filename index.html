@@ -11,7 +11,22 @@
   <option value=eccomerce >Eccomerce and Retail</option>
   <option value=medical >Medical</option>
   <option value=tech >Tech and Engineering</option>
+  <option value=travel >Travel and Outdoor</option>
 </select>
+
+<script>
+   var additional_info_sources = [];
+  
+  function addSource(){
+    additional_info_sources[additional_info_sources.length] = e('url').value;
+    e('sources').innerHTML += e('url').value+', ';
+  }
+</script>
+
+<h2>Website URL with target Information (optional)</h2>
+<input type=text id=url />
+<div id=sources > </div>
+<a href=# onclick=addSource(); >add Source</a> 
 
   <h2>Title/Keywords/Subject</h2>
   <textarea id=title ></textarea>
